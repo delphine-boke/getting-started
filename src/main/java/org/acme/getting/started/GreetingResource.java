@@ -17,7 +17,7 @@ public class GreetingResource {
     @GET //specify type of request
     @Produces(MediaType.TEXT_PLAIN) //specify media type used
     @Path("/greeting/{name}") //select the path of the greeting service
-    public String greeting(@PathParam String name) {
+    public String greeting(@PathParam("name") String name) {
         return service.greeting(name);
     }
 
@@ -25,7 +25,7 @@ public class GreetingResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
 
-        return "Hello RESTEasy";
+        return "Hello RESTEasy, delphine here.!";
     }
 
 }
